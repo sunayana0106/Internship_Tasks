@@ -1,0 +1,18 @@
+# Problem 10 -Designer Door Mat
+# https://www.hackerrank.com/challenges/designer-door-mat/problem
+
+# Read N and M from input
+n, m = map(int, input().split())
+
+# Top half of the door mat
+for i in range(1, n, 2):
+    pattern = (".|." * i).center(m, "-")
+    print(pattern)
+
+# Center line with 'WELCOME'
+print("WELCOME".center(m, "-"))
+
+# Bottom half of the door mat (reverse of the top half)
+for i in range(n - 2, 0, -2):
+    pattern = (".|." * i).center(m, "-")
+    print(pattern)
